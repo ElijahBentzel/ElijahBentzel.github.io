@@ -11,16 +11,20 @@
             color: 2E3532;
             font-family: monospace;
         }
+
         nav {
             background-color: #9fa09d;
         }
+
         a {
             color: #0247af;
         }
-        article {
+
+        header {
             background-color: #bb102a;
         }
-        .evilLebron {
+
+        #evilLebron {
             position: absolute;
             bottom: 50px;
             right: 50px;
@@ -28,9 +32,14 @@
             font-size: x-large;
             text-align: center;
         }
-        
-        
-
+        #firstArticle {
+            background-color: #922727;
+            padding: 10px;
+        }
+        .empWord {
+            color: rgb(0, 0, 0);
+            font: bold 15px monospace;
+        }
     </style>
 </head>
 
@@ -40,13 +49,18 @@
         <a href="index.html">Main</a> |
         <a href="game/index.html">Game</a>
     </nav>
-    <article>
-        <header>
-            <h2>Welcome to my website</h2>
-        </header>
-        <p>I am a human</p>
-    </article>
-    <div class="evilLebron"><p>CLICK ME</p><a href="evil.html"><img src="evil lebron.jpg" alt="evillLebron"></a></div>
+    <div id="firstArticle">
+        <article>
+            <header>
+                <h2>Welcome to my website</h2>
+            </header>
+            <p>I am a <span class="empWord">human</span></p>
+            <p>I am <span class="empWord">tired</span></p>
+        </article>
+    </div>
+    <div id="evilLebron">
+        <p>CLICK ME</p><a href="evil.html"><img src="evil lebron.jpg" alt="evillLebron"></a>
+    </div>
 </body>
 
 </html>
