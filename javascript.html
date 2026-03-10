@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Test</title>
+</head>
+
+<body>
+    <img src="cookie2.jpg" alt="cookie but better" width="200" onclick="addScore()">
+    <div id="scoreBox">0</div>
+    <button onclick="buyMulti()">Buy Upgrade<div id="multiplierPrice">10</div></button>
+    <button onclick="buyAutoclick()">Buy Auto Click <div id="autoClickPrice">50</div></button>
+</body>
+
+<script>
+    var name = prompt("what is your name?")
+    name = name.toLowerCase()
+    if (name == "ryan smith") {
+        document.write("Boiii why u got the most common name")
+    } else {
+        document.write("hello," + name + "!")
+    }
+
+    var score = 0;
+    var multiplier = 1.0;
+    var autoclickamount = 0;
+    var autoclickercost = 50;
+    var scoreBox = document.getElementById("scoreBox")
+    var autoclickprice = document.getElementById("autoClickPrice")
+    var multiplierprice = document.getElementById("multiplierPrice")
+
+    function addScore() {
+        score = score + multiplier;
+        scoreBox.innerHTML = score;
+    }
+
+
+    function buyMulti() {
+        if (score >= (multiplier * 10)) {
+            score = score - (multiplier * 10)
+            multiplier = multiplier + 0.1;
+            scoreBox.innerHTML = score;
+            multiplierprice.innerHTML = multiplier * 10;
+        }
+    }
+
+    function buyAutoclick() {
+        if (autoclickamount == 0 && score >= 50) {
+            autoclickamount = 1;
+            score = score - 50;
+            scoreBox.innerHTML = score;
+            autoclickercost = 60;
+            autoclickprice.innerHTML = 60;
+            setInterval(
+                () => {
+                    score = score + autoclickamount;
+                    scoreBox.innerHTML = score;
+                },
+                1000
+            )
+        } else {
+            if (score >= (autoclickercost * 1.2)) {
+                score = score - (autoclickercost * 1.2);
+                autoclickamount = autoclickamount + 1;
+                scoreBox.innerHTML = score;
+                autoclickercost = autoclickercost * 1.2;
+                autoclickprice.innerHTML = autoclickercost;
+            }
+        } 
+
+    }
+
+</script>
+
+</html>
