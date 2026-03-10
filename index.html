@@ -7,7 +7,7 @@
     <title>Website</title>
     <style>
         body {
-            background-color: #999696;
+            background-color: #7389ec;
             color: 2E3532;
             font-family: monospace;
             width: 80%;
@@ -17,14 +17,19 @@
         nav {
             background-color: #9fa09d;
             border: 2px solid black;
+            margin: 10px;
         }
 
         a {
             color: #0247af;
         }
 
-        header {
-            background-color: #bb102a;
+        #firstArticle header {
+            background-color: #b510bb;
+        }
+        
+        #secondArticle header {
+            background-color: #520712;
         }
 
         #evilLebron {
@@ -36,19 +41,30 @@
             text-align: center;
         }
         #firstArticle {
-            background-color: #922727;
+            background-color: #8f3caf;
             padding: 10px;
             border: 3px solid black;
+            margin: 10px;
         }
         .empWord {
             color: rgb(0, 0, 0);
             font: bold 15px monospace;
         }
+        #secondArticle h2 {
+            color: red
+            
+        }
+        #secondArticle {
+            background-color: #922727;
+            padding: 10px;
+            border: 3px solid black;
+            margin: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>My Awsome Website</h1>
+    <h1>My Website</h1>
     <nav>
         <a href="index.html">Main</a> |
         <a href="game/index.html" target="_blank">Game</a> |
@@ -59,9 +75,16 @@
             <header>
                 <h2>Welcome to my website</h2>
             </header>
-            <p>I am a <span class="empWord">human</span></p>
-            <p>I am <span class="empWord">tired</span></p>
+            <p>This is my website</p>
+            <p>yo</p>
         </article>
+    </div>
+    <div id="secondArticle">
+        <header>
+            <h2>WARNING</h2>
+        </header>
+        <p>If you see Norbel DONT interact with him or bad things will happen!</p>
+
     </div>
     <div id="evilLebron">
         <p>CLICK ME</p><a href="evil.html"><img src="evil lebron.jpg" alt="evillLebron"></a>
